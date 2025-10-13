@@ -1,0 +1,64 @@
+// scripts/fetch-icons.mjs
+import fs from 'node:fs';
+import path from 'node:path';
+import {promisify} from 'node:util';
+const writeFile = promisify(fs.writeFile);
+const mkdir = promisify(fs.mkdir);
+
+// Minimal fetch helper
+async function download(url, filePath) {
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`Failed ${url} -> ${res.status}`);
+  const buf = Buffer.from(await res.arrayBuffer());
+  await writeFile(filePath, buf);
+  console.log('Saved', filePath);
+}
+
+// Apple artwork via iTunes Lookup API
+async function appleIcon(appId, outName) {
+  const url = `https://itunes.apple.com/lookup?id=${appId}`;
+  const res = await fetch(url);
+  const json = await res.json();
+  const art = json?.results?.[0]?.artworkUrl512 || json?.results?.[0]?.artworkUrl100;
+  if (!art) throw new Error('No artwork for ' + appId);
+  return { url: art, out: outName };
+}
+
+// Google Play via simple scrape (google-play-scraper’s icon URL)
+async function playIcon(pkg, outName) {
+  // lightweight scrape: follow the og:image meta
+  const html = await (await fetch(`https://play.google.com/store/apps/details?id=${pkg}&hl=en&gl=US`)).text();
+  const m = html.match(/<meta property="og:image" content="([^"]+)"/i);
+  if (!m) throw new Error('No icon for ' + pkg);
+  // The URL can have =w240-h480-rw etc; request big size
+  const url = m[1].replace(/=w\d+-h\d+-rw.*/, '=w512-h512');
+  return { url, out: outName };
+}
+
+async function main() {
+  const outDir = path.join('assets', 'apps');
+  await mkdir(outDir, { recursive: true });
+
+  const targets = [
+    // [type, id, outputFileName]
+    ['apple', '6472727985', 'skin-wound-2.png'],
+    ['play', 'com.swiftmedical.apollo', 'skin-wound-2-play.png'],
+    ['play', 'com.adithya.memoneet', 'memoneet.png'],
+    ['play', 'com.ghc.marsapp', 'mars.png'],
+    ['apple', '6475237375', 'clust.png'],
+    ['play', 'com.clust.customer', 'clust-play.png'],
+    ['apple', '1668375552', 'flickit.png'],
+    ['play', 'me.flickit', 'flickit-play.png'],
+    ['play', 'com.whetcloud.forunpoint.user', 'forunpoint.png'],
+  ];
+
+  for (const [kind, id, outName] of targets) {
+    const { url, out } = kind === 'apple' ? await appleIcon(id, outName) : await playIcon(id, outName);
+    await download(url, path.join(outDir, out));
+  }
+}
+
+main().catch(err => {
+  console.error(err);
+  process.exit(1);
+});
