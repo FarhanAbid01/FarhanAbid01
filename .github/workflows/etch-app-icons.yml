@@ -13,9 +13,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: mkdir -p scripts assets/apps
-      - name: Write script (skip if already in repo)
-        run: test -f scripts/fetch-icons.mjs || echo "Script missing. Please add it to scripts/fetch-icons.mjs" && ls -la
+      - name: Install deps (none needed)
+        run: echo "ok"
       - name: Run fetcher
         run: node scripts/fetch-icons.mjs
       - name: Commit icons
