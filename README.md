@@ -1,36 +1,53 @@
 <!-- Top Wave -->
+
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=180&color=0:36BCF7,100:6A00FF&text=Farhan%20Abid&fontColor=FFFFFF&fontAlignY=38&desc=Full‑Stack%20Mobile%20Developer&descAlignY=60&section=header&animation=fadeIn" />
+<img src="https://capsule-render.vercel.app/api?type=waving&height=180&color=0:36BCF7,100:6A00FF&text=Farhan%20Abid&fontColor=FFFFFF&fontAlignY=38&desc=Full-Stack%20Mobile%20Developer&descAlignY=60&section=header&animation=fadeIn" />
 </p>
 
 <!-- Hero -->
+
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Inter&weight=700&size=30&duration=2800&pause=900&color=36BCF7&center=true&vCenter=true&width=1000&lines=Hi%F0%9F%91%8B%2C+I'm+Farhan+Abid;Full%E2%80%91Stack+Mobile+Developer+%E2%80%94+Flutter+%E2%80%A2+Dart+%E2%80%A2+Kotlin%2FKMP+%E2%80%A2+Swift+%E2%80%A2+React+Native+%E2%80%A2+Node.js;Elegant+UX+%2B+High+Performance%2C+Shipped+Clean" alt="Typing Intro" />
+<img src="https://readme-typing-svg.herokuapp.com?font=Inter&weight=700&size=30&duration=2800&pause=900&color=36BCF7&center=true&vCenter=true&width=1000&lines=Hi%F0%9F%91%8B%2C+I'm+Farhan+Abid;Full-Stack+Mobile+Developer+%E2%80%94+Flutter+%E2%80%A2+Dart+%E2%80%A2+Kotlin%2FKMP+%E2%80%A2+Swift+%E2%80%A2+Node.js;Elegant+UX+%2B+High+Performance%2C+Shipped+Clean" alt="Typing Intro" />
 </p>
 
-<h2 align="center">Full‑Stack Mobile Developer — Flutter • Dart • Kotlin/KMP • Swift • React Native • Node.js</h2>
+<h2 align="center">Full-Stack Mobile Developer — Flutter • Dart • Kotlin/KMP • Swift • Node.js</h2>
 
 <p align="center">
-  I design and build delightful, performant mobile apps end‑to‑end — from polished UI to reliable backends.
+I design and build delightful, performant mobile apps end-to-end — from polished UI to reliable backends.
+</p>
+
+<!-- Toptal Recognition -->
+
+<p align="center">
+<a href="https://www.toptal.com/developers/resume/farhan-abid#nOjY32" target="_blank">
+<img src="https://img.shields.io/badge/Toptal-Top%203%25%20Talent-204ecf?style=for-the-badge&logo=toptal&logoColor=white" alt="Toptal Top 3% Talent — Hire Me" />
+</a>
+</p>
+
+<p align="center">
+<a href="https://www.toptal.com/developers/resume/farhan-abid#nOjY32">
+<img src="https://img.shields.io/badge/Available%20for%20Hire-Toptal-25a9ef?style=flat-square" alt="Hire me on Toptal" />
+</a>
 </p>
 
 <!-- Contact -->
+
 <p align="center">
-  <a href="mailto:farhanabid196@gmail.com">
-    <img src="https://img.shields.io/badge/Email-farhanabid196%40gmail.com-36BCF7?style=for-the-badge&logo=gmail&logoColor=white" />
-  </a>
-  <a href="https://www.linkedin.com/in/devfarhan/">
-    <img src="https://img.shields.io/badge/LinkedIn-@devfarhan-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
-  </a>
+<a href="mailto:farhanabid196@gmail.com">
+<img src="https://img.shields.io/badge/Email-farhanabid196%40gmail.com-36BCF7?style=for-the-badge&logo=gmail&logoColor=white" />
+</a>
+<a href="https://www.linkedin.com/in/devfarhan/">
+<img src="https://img.shields.io/badge/LinkedIn-@devfarhan-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
+</a>
 </p>
 
 ---
 
 ### 🧠 What I Do
-- Mobile apps with **Flutter (Dart)**, **Kotlin/KMP**, **Swift**, **React Native**
+- Mobile apps with **Flutter (Dart)**, **Kotlin/KMP**, **Swift*
 - Backend APIs with **Node.js** (Express/Nest), **Firebase**
 - CI/CD, Crashlytics, Sentry, Analytics, Store releases
-- Clean Architecture, MVVM, state management (Bloc/Provider/Redux)
+- Clean Architecture, MVVM, MVI , TDD , DDD , state management (Bloc/Provider/Redux/RiverPod)
 
 ### 🛠️ Tech Stack
 <p>
